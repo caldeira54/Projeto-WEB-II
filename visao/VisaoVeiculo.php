@@ -37,7 +37,7 @@ class VisaoVeiculo
     public function mostrarForm()
     {
         $titulo = 'Cadastro de Veículo';
-        $action = Util::$baseUrl . '/index.php?mod=veiculo$act=cadastrar';
+        $action = Util::$baseUrl . '/veiculo/cadastrar';
         $conteudo = '
         <form action="' . $action .'" method="post">
 
