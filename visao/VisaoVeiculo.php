@@ -1,4 +1,7 @@
 <?php
+namespace App\Visao;
+
+use App\Util\Util;
 class VisaoVeiculo
 {
     public function __construct()
@@ -31,7 +34,7 @@ class VisaoVeiculo
 
         $conteudo .= '</table>';
 
-        require_once Util::$baseDir . '/visao/template/geral.phtml';
+        require_once Util::$baseDir . '/Visao/template/geral.phtml';
     }
 
     public function mostrarForm()

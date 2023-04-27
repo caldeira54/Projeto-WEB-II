@@ -1,4 +1,8 @@
 <?php
+namespace App\Database;
+
+use PDO;
+use App\Modelo\Veiculo;
 class DaoVeiculo 
 {
     public function listaTodos()

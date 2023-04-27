@@ -1,4 +1,7 @@
 <?php
+namespace App\Visao;
+
+use App\Util\Util;
 
 class VisaoIndex
 {

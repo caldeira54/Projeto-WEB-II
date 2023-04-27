@@ -1,14 +1,18 @@
 <?php
+namespace App;
+
+use App\Visao\VisaoIndex;
+use Bramus\Router\Router;
 
 require './vendor/autoload.php';
 
-require_once './util/Util.php';
-require_once './visao/VisaoIndex.php';
-require_once './modelo/Veiculo.php';
-require_once './database/Conexao.php';
-require_once './database/DaoVeiculo.php';
-require_once './visao/VisaoVeiculo.php';
-require_once './controle/ControleVeiculo.php';
+// require_once './util/Util.php';
+// require_once './visao/VisaoIndex.php';
+// require_once './modelo/Veiculo.php';
+// require_once './database/Conexao.php';
+// require_once './database/DaoVeiculo.php';
+// require_once './visao/VisaoVeiculo.php';
+// require_once './controle/ControleVeiculo.php';
 
 // $modulo = filter_input(INPUT_GET, 'mod');
 // $acao = filter_input(INPUT_GET, 'act');
@@ -22,7 +26,7 @@ require_once './controle/ControleVeiculo.php';
 require __DIR__ . '/vendor/autoload.php';
 
 // Create Router instance
-$router = new \Bramus\Router\Router();
+$router = new Router();
 
 // Define routes
 $router->all('/', function(){
@@ -30,7 +34,7 @@ $router->all('/', function(){
 });
 
 $router->all('/{modulo}/{acao}', function ($modulo, $acao) {
-    $classe = 'Controle' . $modulo;
+    $classe = 'App\Controle\Controle' . ucfirst($modulo);
 
     if (method_exists($classe, $acao)) {
         $objeto = new $classe();

@@ -1,4 +1,5 @@
 <?php
+namespace App\Modelo;
 class Veiculo
 {
     private $id;

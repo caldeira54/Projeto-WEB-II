@@ -1,4 +1,10 @@
 <?php
+namespace App\Controle;
+
+use App\Modelo\Veiculo;
+use App\Database\DaoVeiculo;
+use App\Visao\VisaoVeiculo;
+
 class ControleVeiculo
 {
     public function listar()

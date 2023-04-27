@@ -1,4 +1,9 @@
 <?php
+namespace App\Database;
+
+use PDO;
+use PDOStatement;
+use PDOException;
 class Conexao
 {
     private static $dsn = 'mysql:host=localhost;dbname=projetoaulai3b2023;port=3306';
